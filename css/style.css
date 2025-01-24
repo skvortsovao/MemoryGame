@@ -1,0 +1,180 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(180, 210, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+   width: 100%;
+}
+h1{
+    font-family: "Ribeye Marrow", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 60px;
+    text-align: center;
+    margin:20px 0;
+}
+h2{
+  font-family: "Ribeye Marrow", serif;
+}
+#controls{
+  width:90%;
+  max-width: 430px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+label{
+  text-align: center;
+  font-family: "Ribeye Marrow", serif;
+  font-size: 23px;
+  padding: 10px;
+}
+option{
+  font-family: "Ribeye Marrow", serif;
+  text-align: center;
+  
+}
+#boardSize, #pattern{
+  font-family: "Ribeye Marrow", serif;
+  font-size: 23px;
+  width:150px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+button{
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  font-family: "Ribeye Marrow", serif;
+  font-size: 23px;
+  background-color: rgba(21, 55, 168, 0.256);
+  grid-column: span 2; 
+  justify-self: center;
+  margin-top: 15px;
+}
+button:hover{
+background-color: aliceblue;
+color: rgba(21, 55, 168, 0.642);
+transition: 0.2s;
+}
+#timer, p{
+  font-family: "Ribeye Marrow", serif;
+}
+@media (max-width:900px){
+  h1{
+    font-size: 40px;
+  }
+  label{
+    font-size: 18px;
+  }
+  #boardSize, #pattern{
+    font-size: 18px;
+    width: 130px;
+  }
+  button{
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    
+  }
+  .card {
+    width:40px;
+    height:40px;
+
+  }
+
+  .card div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #gameBoard{
+    max-width: 300px; /* Allow the board to shrink with smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); /* Smaller minimum size for cards */
+    gap: 3px;
+  }
+  }
+  .card {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .card div {
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+  }
+  
+  .card-front {
+    background-color: #fff;
+    background-size: cover;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+  }
+  
+  .card-back {
+    border-radius: 10px;
+    background-color: #6c757d;
+    transform: rotateY(0deg);
+  }
+  
+  .card.flipped .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card.flipped .card-back {
+    transform: rotateY(180deg);
+  }
+  #gameBoard {
+    position: relative;
+    display: grid;
+    gap: 5px; /* Space between cards */
+    justify-content: center; /* Center the grid horizontally */
+    align-content: center; /* Center the grid vertically */
+    width:90%;
+    max-width: 400px; /* Maximum width for responsiveness */
+    margin: 0 auto; /* Center the board */
+  }
+/* Initially hide the win message */
+.hidden {
+  display: none;
+}
+
+/* Style for the win message */
+#winMessage {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #fff;
+  margin: 10px;
+  padding:10px;
+  border-radius: 15px;
+}
+
+#winMessage h2 {
+  font-size: 24px;
+}
+
+#winMessage p {
+  font-size: 18px;
+}
+
