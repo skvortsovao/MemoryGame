@@ -1,15 +1,3 @@
-// My ideas before I start: 
-// 1) Timer starts when new game button is clicked or first card on the board is clicked
-// 2) when card is clicked I want to see "front side" of this card and no matter if I clcik second card or no - first card will be closed through 1 or 2 seconds
-// 3) emojis under cards are generated randomly, the main thing - every emoji has theit pair on the board and emojis generates randomly, I don't hard code values under esch cell
-// 4) If I click two cards and they match so these cards staying opened and maybe have some color like sign that they are already matched
-// 5) Moves count not with every click but with every SECOND click.
-// 6) After we have paired all cards I want to see container with text, my moves made through game and time.
-// REQUIREMENTS:
-// 1) Point out one place in your code where you used a Functional programming concept (Anything in Chapter 11)
-// 2) Point out one place in your code where you manipulated the DOM with Javascript.
-// 3) Point out one place in your code where you either added listening to an event or you handled an event.
-// 4) Point out one place in your code where you used an ES6 feature.
 document.addEventListener('DOMContentLoaded', () => {
     const gameBoard = document.getElementById('gameBoard');
     const startGameButton = document.getElementById('startGame');
